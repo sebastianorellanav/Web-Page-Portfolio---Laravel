@@ -51,7 +51,9 @@ class EtiquetaController extends Controller
     public function show($id)
     {
         $etiqueta = Etiqueta::find($id);
-        return view('/etiqueta/mostrarContenidoEtiqueta',compact('etiqueta'));
+        $instancia = new Etiqueta();
+        $lista = $instancia->getPhotosAndColections($etiqueta);
+        return view('/etiqueta/mostrarContenidoEtiqueta',compact('etiqueta'), compact('lista'));
     }
 
     /**

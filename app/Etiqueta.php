@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Coleccion;
 
 class Etiqueta extends Model
 {
@@ -54,6 +55,44 @@ class Etiqueta extends Model
         if($nombre){
             return $query->where('nombre', 'LIKE', "%$nombre%"); //LIKE permite buscar palabras semejantes (no iguales)
         }
+    }
+
+    public function scopeIdEtiqueta($query, $id){
+        if($id){
+            return $query->where('id', $id); //LIKE permite buscar palabras semejantes (no iguales)
+        }
+    }
+
+    public function getPhotosAndColections($etiqueta)
+    {
+        $listPhotos = [];   //lista vacia
+        $cont = 0;          //contador = 0
+
+        //obtener las colecciones relacionadas con la etiqueta ingresada (muchos a muchos)
+        $colecciones = $etiqueta->Colecciones;
+        //para cada coleccion
+        foreach ($colecciones as $coleccion) {  
+            //obtener las fotos relacionadas con la coleccion (muchos a muchos)
+            $photos = $coleccion->Fotogrfias;
+
+            if($photos != NULL){
+                //para cada lista de fotos
+                foreach ($photos as $photo) {
+                    //añadir las fotos a una lista unica
+                    $listPhotos[$cont] = $photo;
+                    //aumentar contador
+                    $cont = $cont +1;
+                }
+            }
+        }
+        $result = [];       //lista vacia
+        //guardar colecciones
+        $result[0] = $colecciones;
+        //guardar photos
+        $result[1] = $listPhotos;
+
+        //retornar resultado
+        return $result;
     }
 
 }
