@@ -9,10 +9,10 @@
                 </div>
                 <!-- End: portfolio heading -->
                 <div class="image" style="background-image:url('{{ asset('storage').'/'.$fotografia->ruta}}');background-size: cover;background-position: center;height: 520px;"></div>
-                <div class="row">
-                    <form type="hidden" method="post" action="{{url('/fotografias/guardar', $fotografia->id)}}">
+                <div class="row" style="height: 100px">
+                    <form class="myForm" method="post" action="{{url('/fotografias/guardar', $fotografia->id)}}">
                         {{ csrf_field() }}
-                    <button class="btn btn-danger btn-lg" href="" type="submit" style="margin-left: 100px;margin-bottom: 31px;margin-top: -24px;">Save Photo</button>
+                    <button class="btn btn-danger btn-lg" href="" type="submit" style="margin-left: -470px;margin-bottom: 31px;margin-top: -24px;">Save Photo</button>
                     </form>
                 </div>
                 <div class="row">
