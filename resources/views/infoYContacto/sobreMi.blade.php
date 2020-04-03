@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>About me</title>
 @section('content')
         <section class="portfolio-block hire-me">
             <!-- Start: Mobile App White -->

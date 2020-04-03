@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Photographies</title>
 @section('content')
         <section class="portfolio-block project">
             <div class="container">

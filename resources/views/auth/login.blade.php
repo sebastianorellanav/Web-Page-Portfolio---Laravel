@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Log in</title>
 @section('content')
 <!-- Start: Login Form Dark -->
     <div class="login-dark" style="background-image: url(&quot;/assets/img/LRM_EXPORT_20200217_214020.jpg?h=c75fa380481b2d0e36adf06c98d1aec3&quot;);background-size: cover;background-position: center;">

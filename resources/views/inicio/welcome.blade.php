@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Home</title>
 @section('content')
         <section class="portfolio-block block-intro" style="background-image: url(&quot;/assets/img/2019-01-06%2011.45.24%201.jpg?h=007403603dd26869781cd7448fe48110&quot;);background-position: center;background-size: cover;margin-bottom: 62px;padding-bottom: 7px;padding-top: 134px;height: 548px;margin-top: -5px">
             <div class="container">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Colections</title>
 @section('content')
         <section class="portfolio-block projects-with-sidebar">
             <div class="container">

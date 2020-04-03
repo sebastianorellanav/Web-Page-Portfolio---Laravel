@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Photographies</title>
 @section('content')
         <section class="portfolio-block projects compact-grid">
             <!-- Start: portfolio heading -->

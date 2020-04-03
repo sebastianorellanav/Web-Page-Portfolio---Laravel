@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Edit Photo</title>
 @section('content')
     @if(Auth::check())
     @if(Auth::user()->tieneRol('Administrador'))

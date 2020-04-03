@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Profile</title>
 @section('content')
 <section class="portfolio-block contact">
             <div class="container">

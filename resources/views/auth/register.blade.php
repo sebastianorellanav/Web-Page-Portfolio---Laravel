@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Register</title>
 @section('content')
     <!-- Start: Registration Form with Photo -->
     <div class="register-photo">
