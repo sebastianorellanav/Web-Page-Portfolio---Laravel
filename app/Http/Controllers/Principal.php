@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Coleccion;
 use App\Fotografia;
 use App\Etiqueta;
+use Mail;
 
 class Principal extends Controller
 {
@@ -39,6 +40,17 @@ class Principal extends Controller
             $etiquetas = Etiqueta::take(5)->get();    
             return view('/inicio/welcome',compact('elementos'),compact('fotos','etiquetas'));
         }
+    }
+
+    public function contact(Request $request){
+        $subject = $request->get('subject');
+        $for = "zevaplz@gmail.com";
+        Mail::send('email',$request->all(), function($msj) use($subject,$for){
+            $msj->from("zevaplz@gmail.com","Web Page Visitor");
+            $msj->subject($subject);
+            $msj->to($for);
+        });
+        return redirect()->back();
     }
 
 

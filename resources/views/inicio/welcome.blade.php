@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="about-me">
                     <h1 class="text-center" style="font-size: 55px;color: #fefefe;font-family: Armata, sans-serif;margin-right: 28px;">Seba <strong>Orellana</strong></h1>
-                    <p style="color: rgb(255,255,255);background-color: rgba(92,87,89,0.48);margin-bottom: 95px;margin-top: 19px;margin-right: 36px;">I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.</p>
+                    <p style="color: rgb(255,255,255);background-color: rgba(92,87,89,0.48);margin-bottom: 95px;margin-top: 19px;margin-right: 36px;">Welcome to my portfolio. I am an engineering student and I work as full stack developer. I have a passion for photography and informatics.</p>
                 </div>
             </div>
             <div class="container">

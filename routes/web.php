@@ -22,6 +22,8 @@ Route::get('/aboutMe', function () {
 Route::get('/contacto', function () {
     return view('infoYContacto.contacto');
 });
+Route::post('/contactar', 'Principal@contact')->name('contact');
+//Ruta que esta señalando nuestro formulario
 
 Route::get('/search','Principal@index');
 
