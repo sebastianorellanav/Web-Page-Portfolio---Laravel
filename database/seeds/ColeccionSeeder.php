@@ -11,6 +11,6 @@ class ColeccionSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Coleccion::class,5)->create();
+        //factory(App\Coleccion::class,5)->create();
     }
 }
