@@ -14,7 +14,7 @@
                         <button class="btn btn-outline-dark btn-lg" type="button" style="margin: 16px;color: rgb(174,179,184);">{{$etiqueta->nombre}}</button>
                         @endforeach
                         @else
-                        NO EXISTEN ETIQUETAS CON ESE NOMBRE
+                        <h6>NO EXISTEN ETIQUETAS CON ESE NOMBRE</h6>
                         @endif
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="{{ asset('storage').'/'.$fotografia->ruta}}"><span class="description"><span class="description-heading">{{$fotografia->nombre}}</span><span class="description-body">{{$fotografia->descripcion}}</span></span></a></div>
                         @endforeach
                         @else
-                        NO EXISTEN FOTOGRAFIAS CON ESE NOMBRE
+                        <h6>NO EXISTEN FOTOGRAFIAS CON ESE NOMBRE</h6>
                         @endif
             </div>
             </div>
@@ -40,7 +40,7 @@
                     @if($colecciones->count())
                     @foreach($colecciones as $coleccion)
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="/assets/img/nature/image1.jpg?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="/assets/img/portada2Colection.png?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">{{$coleccion->nombre}}</a></h6>
                                 <p class="text-muted card-text">{{$coleccion->descripcion}}</p>
@@ -49,7 +49,7 @@
                     </div>
                     @endforeach
                     @else
-                    NO EXISTEN COLECCIONES CON ESE NOMBRE
+                    <h6>NO EXISTEN COLECCIONES CON ESE NOMBRE</h6>
                     @endif
                 </div>
             </div>

@@ -12,7 +12,7 @@
                     @if(count($lista[0]))  
                     @foreach($lista[0] as $coleccion)
                         <div class="col-md-6 col-lg-4">
-                            <div class="card border-0"><a href="{{action('ColeccionController@show', $coleccion->id)}}"><img class="card-img-top scale-on-hover" src="/assets/img/nature/image1.jpg?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
+                            <div class="card border-0"><a href="{{action('ColeccionController@show', $coleccion->id)}}"><img class="card-img-top scale-on-hover" src="/assets/img/portada2Colection.png?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
                                 <div class="card-body">
                                     <h6><a href="{{action('ColeccionController@show', $coleccion->id)}}">{{$coleccion->nombre}}</a></h6>
                                     <p class="text-muted card-text">{{$coleccion->descripcion}}</p>

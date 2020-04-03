@@ -50,9 +50,9 @@
                     <div class="col-md-4">
                         <div class="card border-0"><a href="{{action('ColeccionController@show', $dupla[0]->id)}}">
                             @if($dupla[2] != [])
-                            <img class="card-img-top scale-on-hover" src="{{ asset('storage').'/'.$dupla[2]->ruta}}" alt="Card Image"></a>
+                            <img class="card-img-top scale-on-hover" src="/assets/img/portadaColection.png?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
                             @else
-                            <img class="card-img-top scale-on-hover" src="" alt="Card Image"></a>
+                            <img class="card-img-top scale-on-hover" src="/assets/img/portadaColection.png?h=d679710e5ce8e4c2db35fde74a78a924" alt="Card Image"></a>
                             @endif
                             <div class="card-body">
                                 <h6><a href="{{action('ColeccionController@show', $dupla[0]->id)}}">{{$dupla[0]->nombre}}</a></h6>

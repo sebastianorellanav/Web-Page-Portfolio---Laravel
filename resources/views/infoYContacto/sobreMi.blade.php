@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-md-12 col-lg-5 text" style="margin-right: 23px;margin-left: 41px;">
                             <h3>About me</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui. Quisque ac dolor cursus, volutpat nisl vel, porttitor eros.</p>
+                            <p>I am a university student and I am currently studying Civil Informatics Engineering. My favorite hobby is photography. I like to take pictures of landscapes, cities, sunsets, among other things. My favorite sports are cycling and swimming. I really like programming and everything related to informatics. This web page is made by me and it is my first project related to web pages and web applications. I hope you enjoy it.</p>
                         </div>
                     </div>
                 </div>
