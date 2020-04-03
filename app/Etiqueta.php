@@ -73,7 +73,7 @@ class Etiqueta extends Model
         //para cada coleccion
         foreach ($colecciones as $coleccion) {  
             //obtener las fotos relacionadas con la coleccion (muchos a muchos)
-            $photos = $coleccion->Fotogrfias;
+            $photos = $coleccion->Fotografias;
 
             if($photos != NULL){
                 //para cada lista de fotos

@@ -14,6 +14,7 @@ class FotografiaSeeder extends Seeder
         //factory(App\Fotografia::class,4)->create();
 
         $usuario_foto = App\User::where('id', 1)->first();
+        $coleccion = App\Coleccion::where('id', 1)->first();
         $foto = new App\Fotografia();
         $foto->nombre = 'foto1';
         $foto->descripcion = 'zevaplz@gmail.com';
@@ -23,6 +24,7 @@ class FotografiaSeeder extends Seeder
         $foto->save();
 
         $foto->Users()->attach($usuario_foto);
+        $foto->Colecciones()->attach($coleccion);
 
         $usuario_foto = App\User::where('id', 1)->first();
         $foto = new App\Fotografia();
@@ -32,6 +34,7 @@ class FotografiaSeeder extends Seeder
         $foto->ruta = 'zevaplz';
         $foto->fecha = 'zevapfsfsfslz';
         $foto->save();
+        $foto->Colecciones()->attach($coleccion);
 
          //Se agrega rol x a usuario
     }

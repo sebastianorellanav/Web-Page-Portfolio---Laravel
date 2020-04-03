@@ -80,7 +80,12 @@ class FotografiaController extends Controller
     public function show($id)
     {
         $fotografia = Fotografia::find($id);
-        return view('/fotografia/mostrarDetalleFoto',compact('fotografia'));
+        $instancia = new Fotografia();
+        $etiquetas = $instancia->getEtiquetas($fotografia);
+        if($etiquetas == NULL)
+            $etiquetas = [];
+        $masFotos = Fotografia::latest()->take(4)->get();
+        return view('/fotografia/mostrarDetalleFoto',compact('fotografia','etiquetas','masFotos'));
     }
 
     /**
@@ -131,16 +136,19 @@ class FotografiaController extends Controller
         {
             Fotografia::find($id)->delete();
         }
-        
         $fotografias = Fotografia::all();
         return view('fotografia.administrarFotografias',compact('fotografias'));
     }
+
+
 
     public function administrarFotografias()
     {
         $fotografias = Fotografia::all();
         return view('fotografia.administrarFotografias',compact('fotografias'));
     }
+
+
 
     public function userPhotoLikedController($idFoto)
     {
@@ -150,7 +158,12 @@ class FotografiaController extends Controller
         $foto_instancia->userPhotoLiked($idUser,$idFoto);
 
         $fotografia = Fotografia::find($idFoto);
-        return view('/fotografia/mostrarDetalleFoto',compact('fotografia'));
+        $instancia = new Fotografia();
+        $etiquetas = $instancia->getEtiquetas($fotografia);
+        if($etiquetas == NULL)
+            $etiquetas = [];
+        $masFotos = Fotografia::latest()->take(4)->get();
+        return view('/fotografia/mostrarDetalleFoto',compact('fotografia','etiquetas','masFotos'));
     }
 
 }

@@ -35,7 +35,8 @@ class HomeController extends Controller
     {
         $usuario = auth()->user();
         $request->user()->autorizarRoles(['Administrador', 'Visitante']);
-        return view('/usuario/home', compact('usuario'));
+        $fotografias = $usuario->Fotografias;
+        return view('/usuario/home', compact('usuario','fotografias'));
     }
 
     public function edit($id)

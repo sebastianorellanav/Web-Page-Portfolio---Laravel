@@ -27,7 +27,7 @@
 <!-- Body -->
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark portfolio-navbar gradient" style="background-color: #783304;filter: blur(0px) brightness(101%) contrast(128%) grayscale(0%) hue-rotate(360deg) saturate(180%) sepia(0%);padding-bottom: 29px;">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark portfolio-navbar gradient" style="background-color: #783304;filter: blur(0px) brightness(101%) contrast(128%) grayscale(0%) hue-rotate(360deg) saturate(180%) sepia(0%);padding-bottom: 20px;">
         <div class="container"><a class="navbar-brand logo" href="{{ url('/') }}">Home</a><button data-toggle="collapse" class="navbar-toggler text-black-50" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navbarNav" style="background-color: rgba(78,3,43,0);">
@@ -39,16 +39,16 @@
 
                     <li class="nav-item" role="presentation" style="margin-right: -8px;"> 
                         <form method="get" action="{{ url('/search') }}">
-                            <input class="form-control-sm" href="{{action('Principal@index')}}" type="search" name="entrada" placeholder="Buscar" style="margin-right: 6px;"><i class="fa fa-search" type="submit" data-aos="fade" style="font-size: 18px;margin-left: -30px;margin-top: 10px;margin-right: -21px;color:#000b1f;"></i>
+                            <input class="form-control-sm" href="{{action('Principal@index')}}" type="search" name="entrada" placeholder="Buscar" style="margin-right: 6px;"><i class="fa fa-search" type="submit" data-aos="fade" style="font-size: 18px;margin-left: -30px;margin-top: 10px;margin-right: -9px;color:#000b1f;"></i>
                         </form> 
                     </li>
                     
                     @guest
                         <li class="nav-item" style="margin-left: 30px">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fa fa-sign-in" type="submit" data-aos="fade" style="font-size: 25px;margin-left: -7px;margin-right: -21px;color:##ffffff;"></i> <span class="caret"></span>
+                                    <i class="fa fa-sign-in" type="submit" data-aos="fade" style="font-size: 25px;margin-left: 7px;margin-right: -21px;color:##ffffff;"></i> <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right" style="margin-left: 30px" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" style="color:#016ed2;" href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
                                 <a class="dropdown-item" style="color:#016ed2;" href="{{ route('register') }}">{{ __('Register')}}</a>

@@ -62,4 +62,14 @@ class Fotografia extends Model
         //if($idUser)
             //return $query->where();
     }
+
+    public function getEtiquetas($foto)
+    {
+        //obtener las colecciones relacionadas con la etiqueta ingresada (muchos a muchos)
+        $coleccion = $foto->Colecciones->first();
+        $etiquetas = $coleccion->Etiquetas;
+
+        //retornar resultado
+        return $etiquetas;
+    }
 }
